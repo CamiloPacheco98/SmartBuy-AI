@@ -1,0 +1,21 @@
+{
+  "schemaNamespace": "MockShopAPI",
+  "input": {
+    "operationSearchPaths": ["**/*.graphql"],
+    "schemaSearchPaths": ["**/*.graphqls"]
+  },
+  "output": {
+    "testMocks": {
+      "none": {}
+    },
+    "schemaTypes": {
+      "path": "./MockShopAPI",
+      "moduleType": {
+        "swiftPackage": {}
+      }
+    },
+    "operations": {
+      "inSchemaModule": {}
+    }
+  }
+}

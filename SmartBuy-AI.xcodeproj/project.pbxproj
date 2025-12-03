@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A152C512EE0B84C00E36618 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 4A152C502EE0B84C00E36618 /* Apollo */; };
+		4A152C682EE0BC8B00E36618 /* MockShopAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 4A152C672EE0BC8B00E36618 /* MockShopAPI */; };
+		4A72FA6A2EE0B39F00FD078A /* MockShopAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 4A72FA692EE0B39F00FD078A /* MockShopAPI */; };
 		4ACFB6A52E2C0448002F30FF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4ACFB6A42E2C0448002F30FF /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,7 @@
 		4A775F932E2AAD8000650483 /* Exceptions for "SmartBuy-AI" folder in "SmartBuy-AI" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Debug.xcconfig,
 				Info.plist,
 			);
 			target = 4A05C22B2E2A8DE8008C46BB /* SmartBuy-AI */;
@@ -62,6 +66,11 @@
 			path = "SmartBuy-AIUITests";
 			sourceTree = "<group>";
 		};
+		4A152C532EE0B92C00E36618 /* graphql */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = graphql;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +79,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ACFB6A52E2C0448002F30FF /* ComposableArchitecture in Frameworks */,
+				4A152C512EE0B84C00E36618 /* Apollo in Frameworks */,
+				4A152C682EE0BC8B00E36618 /* MockShopAPI in Frameworks */,
+				4A72FA6A2EE0B39F00FD078A /* MockShopAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +109,7 @@
 				4A05C2402E2A8DEA008C46BB /* SmartBuy-AITests */,
 				4A05C24A2E2A8DEA008C46BB /* SmartBuy-AIUITests */,
 				4A05C22D2E2A8DE8008C46BB /* Products */,
+				4A152C532EE0B92C00E36618 /* graphql */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,10 +140,14 @@
 			);
 			fileSystemSynchronizedGroups = (
 				4A05C22E2E2A8DE8008C46BB /* SmartBuy-AI */,
+				4A152C532EE0B92C00E36618 /* graphql */,
 			);
 			name = "SmartBuy-AI";
 			packageProductDependencies = (
 				4ACFB6A42E2C0448002F30FF /* ComposableArchitecture */,
+				4A72FA692EE0B39F00FD078A /* MockShopAPI */,
+				4A152C502EE0B84C00E36618 /* Apollo */,
+				4A152C672EE0BC8B00E36618 /* MockShopAPI */,
 			);
 			productName = "SmartBuy-AI";
 			productReference = 4A05C22C2E2A8DE8008C46BB /* SmartBuy-AI.app */;
@@ -190,7 +207,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					4A05C22B2E2A8DE8008C46BB = {
 						CreatedOnToolsVersion = 16.0;
@@ -216,6 +233,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				4A775F982E2AC56400650483 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				4A152C4F2EE0B84C00E36618 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				4A152C662EE0BC8B00E36618 /* XCLocalSwiftPackageReference "MockShopAPI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4A05C22D2E2A8DE8008C46BB /* Products */;
@@ -327,7 +346,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = J4Y2XYQJ58;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -349,6 +370,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -390,7 +412,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = J4Y2XYQJ58;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -405,6 +429,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -419,10 +444,12 @@
 				CODE_SIGN_ENTITLEMENTS = "SmartBuy-AI/SmartBuy_AI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartBuy-AI/Preview Content\"";
-				DEVELOPMENT_TEAM = J4Y2XYQJ58;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SmartBuy-AI/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -461,10 +488,12 @@
 				CODE_SIGN_ENTITLEMENTS = "SmartBuy-AI/SmartBuy_AI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartBuy-AI/Preview Content\"";
-				DEVELOPMENT_TEAM = J4Y2XYQJ58;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SmartBuy-AI/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -501,7 +530,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J4Y2XYQJ58;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -526,7 +555,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J4Y2XYQJ58;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -550,7 +579,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J4Y2XYQJ58;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -574,7 +603,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J4Y2XYQJ58;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -632,7 +661,22 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		4A152C662EE0BC8B00E36618 /* XCLocalSwiftPackageReference "MockShopAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MockShopAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
+		4A152C4F2EE0B84C00E36618 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.3;
+			};
+		};
 		4A775F982E2AC56400650483 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -644,6 +688,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4A152C502EE0B84C00E36618 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A152C4F2EE0B84C00E36618 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		4A152C672EE0BC8B00E36618 /* MockShopAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MockShopAPI;
+		};
+		4A72FA692EE0B39F00FD078A /* MockShopAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MockShopAPI;
+		};
 		4ACFB6A42E2C0448002F30FF /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4A775F982E2AC56400650483 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

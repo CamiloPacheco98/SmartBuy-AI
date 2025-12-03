@@ -1,6 +1,15 @@
 {
-  "originHash" : "e7024a9cd3fa1c40fa4003b3b2b186c00ba720c787de8ba274caf8fc530677e8",
+  "originHash" : "9ebfb05e610efe54b09433c546988f93e6ac79f14b265b3eb346d568710266d4",
   "pins" : [
+    {
+      "identity" : "apollo-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apollographql/apollo-ios.git",
+      "state" : {
+        "revision" : "0d2c0dec44dab10a2c4e51f4114eb00d08294cd1",
+        "version" : "2.0.3"
+      }
+    },
     {
       "identity" : "combine-schedulers",
       "kind" : "remoteSourceControl",

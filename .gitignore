@@ -62,3 +62,8 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 .DS_Store
 *.xcconfig
+launch.json
+
+# Apollo
+apollo-ios-cli
+MockShopAPI
