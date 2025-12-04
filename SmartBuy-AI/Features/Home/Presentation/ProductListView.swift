@@ -15,9 +15,9 @@ struct ProductListView: View {
                     } else {
                         List(viewStore.productList?.products ?? [], id: \.id) { product in
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(product.title ?? "")
+                                Text(product.title)
                                     .font(.headline)
-                                Text(String(format: "$%.2f", product.price ?? 0))
+                                Text(String(format: "$%.2f", product.price))
                                     .font(.subheadline)
                                     .foregroundColor(.secondary)
                             }
