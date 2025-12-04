@@ -10,11 +10,12 @@ struct RemoteProductDataSource {
         return ProductListDTO(
             products: data.products.edges.compactMap { edge -> ProductDTO? in
                 let node = edge.node
-                let price = node.variants.edges.first?.node.price.amount ?? "0.0"
+                let price = node.variants.edges.first?.node.price.amount ?? Decimal(0.0)
+                let priceDouble = Double(price) ?? 0.0
                 let image = node.featuredImage?.url ?? ""
                 return ProductDTO(
                     id: node.id, title: node.title, description: node.description,
-                    price: Double(price) ?? 0.0, image: image)
+                    price: priceDouble, image: image)
             })
     }
 }

@@ -23,20 +23,18 @@ struct ProductListReducer {
             case .fetchProducts:
                 state.isLoading = true
                 return .run { send in
-                    if let productList = try await productRepository.fetch() {
+                    do {
+                        let productList = try await productRepository.fetch()
                         await send(.productsResponse(Result.success(productList)))
-                    } else {
-                        await send(
-                            .productsResponse(
-                                Result.failure(
-                                    NSError(domain: "ProductList", code: 0, userInfo: nil))))
+                    } catch {
+                        await send(.productsResponse(Result.failure(error)))
                     }
                 }
-            case let .productsResponse(.success(productList)):
+            case .productsResponse(.success(let productList)):
                 state.productList = productList
                 state.isLoading = false
                 return .none
-            case let .productsResponse(.failure(error)):
+            case .productsResponse(.failure(let error)):
                 state.isLoading = false
                 print(error)
                 return .none

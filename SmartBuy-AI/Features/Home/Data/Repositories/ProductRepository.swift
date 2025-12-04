@@ -12,7 +12,7 @@ final class ProductRepository: ProductRepositoryProtocol {
         self.remote = remote
     }
 
-    func fetch() async throws -> ProductList? {
+    func fetch() async throws -> ProductList {
         do {
             let response = try await remote.fetchProducts()
             return response.toDomain()
